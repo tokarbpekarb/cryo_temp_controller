@@ -10,7 +10,9 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <uAC6>1</uAC6>
+      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F407VGTx</Device>
@@ -51,7 +53,7 @@
           <OutputName>cryo_temp_controller</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -312,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -321,11 +323,11 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>1</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
-            <uGnu>0</uGnu>
+            <uC99>1</uC99>
+            <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>3</v6Lang>
             <v6LangP>3</v6LangP>
@@ -338,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\lib\App;.\lib\assets;.\lib\CMSIS;.\lib\GUI;.\lib\HW;.\lib\LCD_RA8876_FT5316;.\lib\SPL;.\lib\Square-GUI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -380,7 +382,367 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\App\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HW</GroupName>
+          <Files>
+            <File>
+              <FileName>CPU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\CPU.c</FilePath>
+            </File>
+            <File>
+              <FileName>CPU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\CPU.h</FilePath>
+            </File>
+            <File>
+              <FileName>EXTI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\EXTI.c</FilePath>
+            </File>
+            <File>
+              <FileName>EXTI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\EXTI.h</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\GPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\SPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\HW\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\HW\Timer.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>GUI</GroupName>
+          <Files>
+            <File>
+              <FileName>gui_impl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\GUI\gui_impl.c</FilePath>
+            </File>
+            <File>
+              <FileName>gui_impl.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\GUI\gui_impl.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_dataTransfer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\GUI\SGUI_dataTransfer.c</FilePath>
+            </File>
+            <File>
+              <FileName>swipe.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\GUI\swipe.c</FilePath>
+            </File>
+            <File>
+              <FileName>swipe.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\GUI\swipe.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>core_cm4.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\CMSIS\core_cm4.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_cmFunc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\CMSIS\core_cmFunc.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_cmInstr.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\CMSIS\core_cmInstr.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_cmSimd.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\CMSIS\core_cmSimd.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\CMSIS\stm32f4xx_conf.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SPL</GroupName>
+          <Files>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>misc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\misc.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_exti.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_exti.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_rcc.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_spi.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_syscfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_syscfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_syscfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_syscfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\SPL\stm32f4xx_tim.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>assets</GroupName>
+        </Group>
+        <Group>
+          <GroupName>LCD</GroupName>
+          <Files>
+            <File>
+              <FileName>FT5316.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\FT5316.c</FilePath>
+            </File>
+            <File>
+              <FileName>FT5316.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\FT5316.h</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD_api.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\LCD_api.h</FilePath>
+            </File>
+            <File>
+              <FileName>RA8876.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\RA8876.c</FilePath>
+            </File>
+            <File>
+              <FileName>RA8876.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\LCD_RA8876_FT5316\RA8876.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SGUI</GroupName>
+          <Files>
+            <File>
+              <FileName>SGUI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_button.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_button.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_canvas.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_canvas.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_canvas.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_canvas.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_dataTransfer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_dataTransfer.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_label.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_label.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_label.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_label.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_page.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_page.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_page.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_page.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_picture.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_picture.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_picture.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_picture.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_primitives.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_primitives.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_primitives.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_primitives.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_string.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_string.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_string.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_string.h</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>SGUI_system.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\lib\Square-GUI\SGUI_system.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
