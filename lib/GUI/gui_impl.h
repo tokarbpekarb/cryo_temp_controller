@@ -11,6 +11,661 @@
 
 #define DELAY_BETWEEN_PAGES 80
 
+//PAGE 0
+#define P0_B_MSWITCH1_P 0
+#define P0_B_MSWITCH1_X0 310
+#define P0_B_MSWITCH1_Y0 430
+#define P0_B_MSWITCH1_X1 P0_B_MSWITCH1_X0+125
+#define P0_B_MSWITCH1_Y1 P0_B_MSWITCH1_Y0+65
+#define P0_B_MSWITCH1_RX 10
+#define P0_B_MSWITCH1_RY 10
+#define P0_B_MSWITCH1_FW 2
+#define P0_B_MSWITCH1_BC 0x0569
+#define P0_B_MSWITCH1_FC 0xFFFF
+#define P0_B_MSWITCH1_T "Вкл"
+#define P0_B_MSWITCH1_TS FONT_SIZE_48
+#define P0_B_MSWITCH1_TC 0x0000
+#define P0_B_MSWITCH1_TMX 5
+#define P0_B_MSWITCH1_TMY 5
+#define P0_B_MSWITCH1_STATE 1
+#define P0_B_MSWITCH1_DELAY 500
+#define P0_B_MSWITCH1_ACT btn_test
+
+#define P0_B_MEAS_P 0
+#define P0_B_MEAS_X0 5
+#define P0_B_MEAS_Y0 555
+#define P0_B_MEAS_X1 P0_B_MEAS_X0+120
+#define P0_B_MEAS_Y1 P0_B_MEAS_Y0+40
+#define P0_B_MEAS_RX 10
+#define P0_B_MEAS_RY 10
+#define P0_B_MEAS_FW 2
+#define P0_B_MEAS_BC 0xFFFF
+#define P0_B_MEAS_FC 0xA534
+#define P0_B_MEAS_T "Измерения"
+#define P0_B_MEAS_TS FONT_SIZE_24
+#define P0_B_MEAS_TC 0x0000
+#define P0_B_MEAS_TMX 5
+#define P0_B_MEAS_TMY 5
+#define P0_B_MEAS_STATE 1
+#define P0_B_MEAS_DELAY 500
+#define P0_B_MEAS_ACT nothing
+
+#define P0_B_PID_P 0
+#define P0_B_PID_X0 185
+#define P0_B_PID_Y0 555
+#define P0_B_PID_X1 P0_B_PID_X0+120
+#define P0_B_PID_Y1 P0_B_PID_Y0+40
+#define P0_B_PID_RX 10
+#define P0_B_PID_RY 10
+#define P0_B_PID_FW 2
+#define P0_B_PID_BC 0xFFFF
+#define P0_B_PID_FC 0xA534
+#define P0_B_PID_T "P I D"
+#define P0_B_PID_TS FONT_SIZE_24
+#define P0_B_PID_TC 0xA534
+#define P0_B_PID_TMX 5
+#define P0_B_PID_TMY 5
+#define P0_B_PID_STATE 1
+#define P0_B_PID_DELAY 500
+#define P0_B_PID_ACT btn_showPID
+
+#define P0_B_SETTINGS_P 0
+#define P0_B_SETTINGS_X0 360
+#define P0_B_SETTINGS_Y0 555
+#define P0_B_SETTINGS_X1 P0_B_SETTINGS_X0+120
+#define P0_B_SETTINGS_Y1 P0_B_SETTINGS_Y0+40
+#define P0_B_SETTINGS_RX 10
+#define P0_B_SETTINGS_RY 10
+#define P0_B_SETTINGS_FW 2
+#define P0_B_SETTINGS_BC 0xFFFF
+#define P0_B_SETTINGS_FC 0xA534
+#define P0_B_SETTINGS_T "Настройки"
+#define P0_B_SETTINGS_TS FONT_SIZE_24
+#define P0_B_SETTINGS_TC 0xA534
+#define P0_B_SETTINGS_TMX 5
+#define P0_B_SETTINGS_TMY 5
+#define P0_B_SETTINGS_STATE 1
+#define P0_B_SETTINGS_DELAY 500
+#define P0_B_SETTINGS_ACT btn_show_settings
+
+#define P0_B_CH1B_P 0
+#define P0_B_CH1B_X0 540
+#define P0_B_CH1B_Y0 245
+#define P0_B_CH1B_X1 P0_B_CH1B_X0+125
+#define P0_B_CH1B_Y1 P0_B_CH1B_Y0+65
+#define P0_B_CH1B_RX 10
+#define P0_B_CH1B_RY 10
+#define P0_B_CH1B_FW 2
+#define P0_B_CH1B_BC 0xFFFF
+#define P0_B_CH1B_FC 0xA534
+#define P0_B_CH1B_T "10"
+#define P0_B_CH1B_TS FONT_SIZE_48
+#define P0_B_CH1B_TC 0x21E2
+#define P0_B_CH1B_TMX 5
+#define P0_B_CH1B_TMY 5
+#define P0_B_CH1B_STATE 1
+#define P0_B_CH1B_DELAY 500
+#define P0_B_CH1B_ACT nothing
+
+#define P0_B_CH1MOD_P 0
+#define P0_B_CH1MOD_X0 540
+#define P0_B_CH1MOD_Y0 335
+#define P0_B_CH1MOD_X1 P0_B_CH1MOD_X0+125
+#define P0_B_CH1MOD_Y1 P0_B_CH1MOD_Y0+65
+#define P0_B_CH1MOD_RX 10
+#define P0_B_CH1MOD_RY 10
+#define P0_B_CH1MOD_FW 2
+#define P0_B_CH1MOD_BC 0xFFFF
+#define P0_B_CH1MOD_FC 0xA534
+#define P0_B_CH1MOD_T "[мкА]"
+#define P0_B_CH1MOD_TS FONT_SIZE_48
+#define P0_B_CH1MOD_TC 0x21E2
+#define P0_B_CH1MOD_TMX 5
+#define P0_B_CH1MOD_TMY 5
+#define P0_B_CH1MOD_STATE 1
+#define P0_B_CH1MOD_DELAY 500
+#define P0_B_CH1MOD_ACT nothing
+
+#define P0_B_CH2B_P 0
+#define P0_B_CH2B_X0 800
+#define P0_B_CH2B_Y0 245
+#define P0_B_CH2B_X1 P0_B_CH2B_X0+125
+#define P0_B_CH2B_Y1 P0_B_CH2B_Y0+65
+#define P0_B_CH2B_RX 10
+#define P0_B_CH2B_RY 10
+#define P0_B_CH2B_FW 2
+#define P0_B_CH2B_BC 0xFFFF
+#define P0_B_CH2B_FC 0xA534
+#define P0_B_CH2B_T "500"
+#define P0_B_CH2B_TS FONT_SIZE_48
+#define P0_B_CH2B_TC 0x21E2
+#define P0_B_CH2B_TMX 5
+#define P0_B_CH2B_TMY 5
+#define P0_B_CH2B_STATE 1
+#define P0_B_CH2B_DELAY 500
+#define P0_B_CH2B_ACT nothing
+
+#define P0_B_CH2MOD_P 0
+#define P0_B_CH2MOD_X0 800
+#define P0_B_CH2MOD_Y0 340
+#define P0_B_CH2MOD_X1 P0_B_CH2MOD_X0+125
+#define P0_B_CH2MOD_Y1 P0_B_CH2MOD_Y0+65
+#define P0_B_CH2MOD_RX 10
+#define P0_B_CH2MOD_RY 10
+#define P0_B_CH2MOD_FW 2
+#define P0_B_CH2MOD_BC 0xFFFF
+#define P0_B_CH2MOD_FC 0xA534
+#define P0_B_CH2MOD_T "[нА]"
+#define P0_B_CH2MOD_TS FONT_SIZE_48
+#define P0_B_CH2MOD_TC 0x21E2
+#define P0_B_CH2MOD_TMX 5
+#define P0_B_CH2MOD_TMY 5
+#define P0_B_CH2MOD_STATE 1
+#define P0_B_CH2MOD_DELAY 500
+#define P0_B_CH2MOD_ACT btn_test
+
+#define P0_B_MSWITCH2_P 0
+#define P0_B_MSWITCH2_X0 540
+#define P0_B_MSWITCH2_Y0 429
+#define P0_B_MSWITCH2_X1 P0_B_MSWITCH2_X0+125
+#define P0_B_MSWITCH2_Y1 P0_B_MSWITCH2_Y0+65
+#define P0_B_MSWITCH2_RX 10
+#define P0_B_MSWITCH2_RY 10
+#define P0_B_MSWITCH2_FW 2
+#define P0_B_MSWITCH2_BC 0x0569
+#define P0_B_MSWITCH2_FC 0xFFFF
+#define P0_B_MSWITCH2_T "Вкл"
+#define P0_B_MSWITCH2_TS FONT_SIZE_48
+#define P0_B_MSWITCH2_TC 0x0000
+#define P0_B_MSWITCH2_TMX 5
+#define P0_B_MSWITCH2_TMY 5
+#define P0_B_MSWITCH2_STATE 1
+#define P0_B_MSWITCH2_DELAY 500
+#define P0_B_MSWITCH2_ACT nothing
+
+#define P0_B_MSWITCH3_P 0
+#define P0_B_MSWITCH3_X0 802
+#define P0_B_MSWITCH3_Y0 429
+#define P0_B_MSWITCH3_X1 P0_B_MSWITCH3_X0+125
+#define P0_B_MSWITCH3_Y1 P0_B_MSWITCH3_Y0+65
+#define P0_B_MSWITCH3_RX 10
+#define P0_B_MSWITCH3_RY 10
+#define P0_B_MSWITCH3_FW 2
+#define P0_B_MSWITCH3_BC 0x0569
+#define P0_B_MSWITCH3_FC 0xFFFF
+#define P0_B_MSWITCH3_T "Вкл"
+#define P0_B_MSWITCH3_TS FONT_SIZE_48
+#define P0_B_MSWITCH3_TC 0x0000
+#define P0_B_MSWITCH3_TMX 5
+#define P0_B_MSWITCH3_TMY 5
+#define P0_B_MSWITCH3_STATE 1
+#define P0_B_MSWITCH3_DELAY 500
+#define P0_B_MSWITCH3_ACT nothing
+
+//ыхщсыћ
+#define L_DATETIME_P 0
+#define L_DATETIME_X0	750
+#define L_DATETIME_Y0 555
+#define L_DATETIME_X1 L_DATETIME_X0 + 275
+#define L_DATETIME_Y1 L_DATETIME_Y0 + 47
+#define L_DATETIME_RX 0
+#define L_DATETIME_RY 0
+#define L_DATETIME_FW 2
+#define L_DATETIME_LC 0xFFFF
+#define L_DATETIME_FC 0xFFFF
+#define L_DATETIME_T "13.01.22 20:10:12"
+#define L_DATETIME_TS FONT_SIZE_32
+#define L_DATETIME_TC 0xA534
+#define L_DATETIME_TMX 5
+#define L_DATETIME_TMY 5
+#define L_DATETIME_ACT nothing
+
+#define P0_L_MSW1STATE_P 0
+#define P0_L_MSW1STATE_X0	270
+#define P0_L_MSW1STATE_Y0 490
+#define P0_L_MSW1STATE_X1 P0_L_MSW1STATE_X0 + 216
+#define P0_L_MSW1STATE_Y1 P0_L_MSW1STATE_Y0 + 51
+#define P0_L_MSW1STATE_RX 0
+#define P0_L_MSW1STATE_RY 0
+#define P0_L_MSW1STATE_FW 2
+#define P0_L_MSW1STATE_LC 0xFFFF
+#define P0_L_MSW1STATE_FC 0xFFFF
+#define P0_L_MSW1STATE_T "Нагрев включен"
+#define P0_L_MSW1STATE_TS FONT_SIZE_32
+#define P0_L_MSW1STATE_TC 0xF800
+#define P0_L_MSW1STATE_TMX 5
+#define P0_L_MSW1STATE_TMY 5
+#define P0_L_MSW1STATE_ACT nothing
+
+#define P0_L_MSW2STATE_P 0
+#define P0_L_MSW2STATE_X0	550
+#define P0_L_MSW2STATE_Y0 490
+#define P0_L_MSW2STATE_X1 P0_L_MSW2STATE_X0 + 145
+#define P0_L_MSW2STATE_Y1 P0_L_MSW2STATE_Y0 + 51
+#define P0_L_MSW2STATE_RX 0
+#define P0_L_MSW2STATE_RY 0
+#define P0_L_MSW2STATE_FW 2
+#define P0_L_MSW2STATE_LC 0xFFFF
+#define P0_L_MSW2STATE_FC 0xFFFF
+#define P0_L_MSW2STATE_T "включен"
+#define P0_L_MSW2STATE_TS FONT_SIZE_32
+#define P0_L_MSW2STATE_TC 0xF800
+#define P0_L_MSW2STATE_TMX 5
+#define P0_L_MSW2STATE_TMY 5
+#define P0_L_MSW2STATE_ACT nothing
+
+#define P0_L_MSW3STATE_P 0
+#define P0_L_MSW3STATE_X0	810
+#define P0_L_MSW3STATE_Y0 490
+#define P0_L_MSW3STATE_X1 P0_L_MSW3STATE_X0 + 145
+#define P0_L_MSW3STATE_Y1 P0_L_MSW3STATE_Y0 + 51
+#define P0_L_MSW3STATE_RX 0
+#define P0_L_MSW3STATE_RY 0
+#define P0_L_MSW3STATE_FW 2
+#define P0_L_MSW3STATE_LC 0xFFFF
+#define P0_L_MSW3STATE_FC 0xFFFF
+#define P0_L_MSW3STATE_T "включен"
+#define P0_L_MSW3STATE_TS FONT_SIZE_32
+#define P0_L_MSW3STATE_TC 0xF800
+#define P0_L_MSW3STATE_TMX 5
+#define P0_L_MSW3STATE_TMY 5
+#define P0_L_MSW3STATE_ACT nothing
+
+#define P0_L_CH1CV_P 0
+#define P0_L_CH1CV_X0	550
+#define P0_L_CH1CV_Y0 130
+#define P0_L_CH1CV_X1 P0_L_CH1CV_X0 + 131
+#define P0_L_CH1CV_Y1 P0_L_CH1CV_Y0 + 65
+#define P0_L_CH1CV_RX 0
+#define P0_L_CH1CV_RY 0
+#define P0_L_CH1CV_FW 2
+#define P0_L_CH1CV_LC 0xFFFF
+#define P0_L_CH1CV_FC 0xFFFF
+#define P0_L_CH1CV_T "10.08"
+#define P0_L_CH1CV_TS FONT_SIZE_48
+#define P0_L_CH1CV_TC 0x00EB
+#define P0_L_CH1CV_TMX 5
+#define P0_L_CH1CV_TMY 5
+#define P0_L_CH1CV_ACT btn_test
+
+#define P0_L_CH1K1_P 0
+#define P0_L_CH1K1_X0	40
+#define P0_L_CH1K1_Y0 130
+#define P0_L_CH1K1_X1 P0_L_CH1K1_X0 + 131
+#define P0_L_CH1K1_Y1 P0_L_CH1K1_Y0 + 65
+#define P0_L_CH1K1_RX 0
+#define P0_L_CH1K1_RY 0
+#define P0_L_CH1K1_FW 2
+#define P0_L_CH1K1_LC 0xFFFF
+#define P0_L_CH1K1_FC 0xFFFF
+#define P0_L_CH1K1_T "74.12"
+#define P0_L_CH1K1_TS FONT_SIZE_48
+#define P0_L_CH1K1_TC 0x00EB
+#define P0_L_CH1K1_TMX 5
+#define P0_L_CH1K1_TMY 5
+#define P0_L_CH1K1_ACT nothing
+
+#define P0_L_CH1B1_P 0
+#define P0_L_CH1B1_X0	40
+#define P0_L_CH1B1_Y0 240
+#define P0_L_CH1B1_X1 P0_L_CH1B1_X0 + 131
+#define P0_L_CH1B1_Y1 P0_L_CH1B1_Y0 + 65
+#define P0_L_CH1B1_RX 0
+#define P0_L_CH1B1_RY 0
+#define P0_L_CH1B1_FW 2
+#define P0_L_CH1B1_LC 0xFFFF
+#define P0_L_CH1B1_FC 0xFFFF
+#define P0_L_CH1B1_T "47.05"
+#define P0_L_CH1B1_TS FONT_SIZE_48
+#define P0_L_CH1B1_TC 0xF800
+#define P0_L_CH1B1_TMX 5
+#define P0_L_CH1B1_TMY 5
+#define P0_L_CH1B1_ACT nothing
+
+#define P0_L_CH1B2_P 0
+#define P0_L_CH1B2_X0	40
+#define P0_L_CH1B2_Y0 310
+#define P0_L_CH1B2_X1 P0_L_CH1B2_X0 + 56
+#define P0_L_CH1B2_Y1 P0_L_CH1B2_Y0 + 65
+#define P0_L_CH1B2_RX 0
+#define P0_L_CH1B2_RY 0
+#define P0_L_CH1B2_FW 2
+#define P0_L_CH1B2_LC 0xFFFF
+#define P0_L_CH1B2_FC 0xFFFF
+#define P0_L_CH1B2_T "50"
+#define P0_L_CH1B2_TS FONT_SIZE_32
+#define P0_L_CH1B2_TC 0xF800
+#define P0_L_CH1B2_TMX 5
+#define P0_L_CH1B2_TMY 5
+#define P0_L_CH1B2_ACT nothing
+
+#define P0_L_CH1BT1_P 0
+#define P0_L_CH1BT1_X0	40
+#define P0_L_CH1BT1_Y0 365
+#define P0_L_CH1BT1_X1 P0_L_CH1BT1_X0 + 96
+#define P0_L_CH1BT1_Y1 P0_L_CH1BT1_Y0 + 65
+#define P0_L_CH1BT1_RX 0
+#define P0_L_CH1BT1_RY 0
+#define P0_L_CH1BT1_FW 2
+#define P0_L_CH1BT1_LC 0xFFFF
+#define P0_L_CH1BT1_FC 0xFFFF
+#define P0_L_CH1BT1_T "35.58"
+#define P0_L_CH1BT1_TS FONT_SIZE_32
+#define P0_L_CH1BT1_TC 0xF800
+#define P0_L_CH1BT1_TMX 5
+#define P0_L_CH1BT1_TMY 5
+#define P0_L_CH1BT1_ACT nothing
+
+#define P0_L_CH2K1_P 0
+#define P0_L_CH2K1_X0	330
+#define P0_L_CH2K1_Y0 130
+#define P0_L_CH2K1_X1 P0_L_CH2K1_X0 + 131
+#define P0_L_CH2K1_Y1 P0_L_CH2K1_Y0 + 65
+#define P0_L_CH2K1_RX 0
+#define P0_L_CH2K1_RY 0
+#define P0_L_CH2K1_FW 2
+#define P0_L_CH2K1_LC 0xFFFF
+#define P0_L_CH2K1_FC 0xFFFF
+#define P0_L_CH2K1_T "4.16"
+#define P0_L_CH2K1_TS FONT_SIZE_48
+#define P0_L_CH2K1_TC 0x00EB
+#define P0_L_CH2K1_TMX 5
+#define P0_L_CH2K1_TMY 5
+#define P0_L_CH2K1_ACT nothing
+
+#define P0_L_CH2CV_P 0
+#define P0_L_CH2CV_X0	790
+#define P0_L_CH2CV_Y0 130
+#define P0_L_CH2CV_X1 P0_L_CH2CV_X0 + 131
+#define P0_L_CH2CV_Y1 P0_L_CH2CV_Y0 + 65
+#define P0_L_CH2CV_RX 0
+#define P0_L_CH2CV_RY 0
+#define P0_L_CH2CV_FW 2
+#define P0_L_CH2CV_LC 0xFFFF
+#define P0_L_CH2CV_FC 0xFFFF
+#define P0_L_CH2CV_T "74.12"
+#define P0_L_CH2CV_TS FONT_SIZE_48
+#define P0_L_CH2CV_TC 0x00EB
+#define P0_L_CH2CV_TMX 5
+#define P0_L_CH2CV_TMY 5
+#define P0_L_CH2CV_ACT nothing
+
+#define P0_L_CH2MA1_P 0
+#define P0_L_CH2MA1_X0 330
+#define P0_L_CH2MA1_Y0 240
+#define P0_L_CH2MA1_X1 P0_L_CH2MA1_X0 + 131
+#define P0_L_CH2MA1_Y1 P0_L_CH2MA1_Y0 + 65
+#define P0_L_CH2MA1_RX 0
+#define P0_L_CH2MA1_RY 0
+#define P0_L_CH2MA1_FW 2
+#define P0_L_CH2MA1_LC 0xFFFF
+#define P0_L_CH2MA1_FC 0xFFFF
+#define P0_L_CH2MA1_T "820"
+#define P0_L_CH2MA1_TS FONT_SIZE_48
+#define P0_L_CH2MA1_TC 0xF800
+#define P0_L_CH2MA1_TMX 5
+#define P0_L_CH2MA1_TMY 5
+#define P0_L_CH2MA1_ACT nothing
+
+//PAGE 1
+#define P1_B_MSWITCH1_P 1
+#define P1_B_MSWITCH1_X0 310
+#define P1_B_MSWITCH1_Y0 430
+#define P1_B_MSWITCH1_X1 P1_B_MSWITCH1_X0+125
+#define P1_B_MSWITCH1_Y1 P1_B_MSWITCH1_Y0+65
+#define P1_B_MSWITCH1_RX 10
+#define P1_B_MSWITCH1_RY 10
+#define P1_B_MSWITCH1_FW 2
+#define P1_B_MSWITCH1_BC 0x0569
+#define P1_B_MSWITCH1_FC 0xFFFF
+#define P1_B_MSWITCH1_T "Вкл"
+#define P1_B_MSWITCH1_TS FONT_SIZE_48
+#define P1_B_MSWITCH1_TC 0x0000
+#define P1_B_MSWITCH1_TMX 5
+#define P1_B_MSWITCH1_TMY 5
+#define P1_B_MSWITCH1_STATE 1
+#define P1_B_MSWITCH1_DELAY 500
+#define P1_B_MSWITCH1_ACT btn_test
+
+#define P1_B_MEAS_P 1
+#define P1_B_MEAS_ACT btn_show_meas
+#define P1_B_MEAS_TC 0xA534
+
+#define P1_B_PID_P 1
+#define P1_B_PID_TC 0x0000
+#define P1_B_PID_ACT nothing
+
+#define P1_B_SETTINGS_P 1
+
+#define P1_L_MSW1STATE_P 1
+#define P1_L_CH1B1_P 1
+#define P1_L_CH2MA1_P 1
+#define P1_L_CH1B2_P 1
+#define P1_L_CH1BT1_P 1
+
+#define P1_B_MAXVAL_P 1
+#define P1_B_MAXVAL_X0 710
+#define P1_B_MAXVAL_Y0 110
+#define P1_B_MAXVAL_X1 P1_B_MAXVAL_X0+130
+#define P1_B_MAXVAL_Y1 P1_B_MAXVAL_Y0+65
+#define P1_B_MAXVAL_RX 10
+#define P1_B_MAXVAL_RY 10
+#define P1_B_MAXVAL_FW 2
+#define P1_B_MAXVAL_BC 0xFFFF
+#define P1_B_MAXVAL_FC 0x0000
+#define P1_B_MAXVAL_T "50"
+#define P1_B_MAXVAL_TS FONT_SIZE_48
+#define P1_B_MAXVAL_TC 0x21E2
+#define P1_B_MAXVAL_TMX 5
+#define P1_B_MAXVAL_TMY 5
+#define P1_B_MAXVAL_STATE 1
+#define P1_B_MAXVAL_DELAY 500
+#define P1_B_MAXVAL_ACT nothing
+
+#define P1_B_P_SWITCH_P 1
+#define P1_B_P_SWITCH_X0 535
+#define P1_B_P_SWITCH_Y0 225
+#define P1_B_P_SWITCH_X1 P1_B_P_SWITCH_X0+130
+#define P1_B_P_SWITCH_Y1 P1_B_P_SWITCH_Y0+60
+#define P1_B_P_SWITCH_RX 10
+#define P1_B_P_SWITCH_RY 10
+#define P1_B_P_SWITCH_FW 2
+#define P1_B_P_SWITCH_BC 0xFFFF
+#define P1_B_P_SWITCH_FC 0x0000
+#define P1_B_P_SWITCH_T "P"
+#define P1_B_P_SWITCH_TS FONT_SIZE_48
+#define P1_B_P_SWITCH_TC 0x21E2
+#define P1_B_P_SWITCH_TMX 5
+#define P1_B_P_SWITCH_TMY 5
+#define P1_B_P_SWITCH_STATE 1
+#define P1_B_P_SWITCH_DELAY 500
+#define P1_B_P_SWITCH_ACT nothing
+
+#define P1_B_PVAL_P 1
+#define P1_B_PVAL_X0 530
+#define P1_B_PVAL_Y0 315
+#define P1_B_PVAL_X1 P1_B_PVAL_X0+130
+#define P1_B_PVAL_Y1 P1_B_PVAL_Y0+60
+#define P1_B_PVAL_RX 10
+#define P1_B_PVAL_RY 10
+#define P1_B_PVAL_FW 2
+#define P1_B_PVAL_BC 0xFFFF
+#define P1_B_PVAL_FC 0x0000
+#define P1_B_PVAL_T "12.1"
+#define P1_B_PVAL_TS FONT_SIZE_48
+#define P1_B_PVAL_TC 0x21E2
+#define P1_B_PVAL_TMX 5
+#define P1_B_PVAL_TMY 5
+#define P1_B_PVAL_STATE 1
+#define P1_B_PVAL_DELAY 500
+#define P1_B_PVAL_ACT nothing
+
+#define P1_B_I_SWITCH_P 1
+#define P1_B_I_SWITCH_X0 715
+#define P1_B_I_SWITCH_Y0 225
+#define P1_B_I_SWITCH_X1 P1_B_I_SWITCH_X0+130
+#define P1_B_I_SWITCH_Y1 P1_B_I_SWITCH_Y0+60
+#define P1_B_I_SWITCH_RX 10
+#define P1_B_I_SWITCH_RY 10
+#define P1_B_I_SWITCH_FW 2
+#define P1_B_I_SWITCH_BC 0xFFFF
+#define P1_B_I_SWITCH_FC 0x0000
+#define P1_B_I_SWITCH_T "I"
+#define P1_B_I_SWITCH_TS FONT_SIZE_48
+#define P1_B_I_SWITCH_TC 0x21E2
+#define P1_B_I_SWITCH_TMX 5
+#define P1_B_I_SWITCH_TMY 5
+#define P1_B_I_SWITCH_STATE 1
+#define P1_B_I_SWITCH_DELAY 500
+#define P1_B_I_SWITCH_ACT nothing
+
+#define P1_B_IVAL_P 1
+#define P1_B_IVAL_X0 715
+#define P1_B_IVAL_Y0 315
+#define P1_B_IVAL_X1 P1_B_IVAL_X0+130
+#define P1_B_IVAL_Y1 P1_B_IVAL_Y0+60
+#define P1_B_IVAL_RX 10
+#define P1_B_IVAL_RY 10
+#define P1_B_IVAL_FW 2
+#define P1_B_IVAL_BC 0xFFFF
+#define P1_B_IVAL_FC 0x0000
+#define P1_B_IVAL_T "0.55"
+#define P1_B_IVAL_TS FONT_SIZE_48
+#define P1_B_IVAL_TC 0x21E2
+#define P1_B_IVAL_TMX 5
+#define P1_B_IVAL_TMY 5
+#define P1_B_IVAL_STATE 1
+#define P1_B_IVAL_DELAY 500
+#define P1_B_IVAL_ACT nothing
+
+#define P1_B_D_SWITCH_P 1
+#define P1_B_D_SWITCH_X0 880
+#define P1_B_D_SWITCH_Y0 225
+#define P1_B_D_SWITCH_X1 P1_B_D_SWITCH_X0+130
+#define P1_B_D_SWITCH_Y1 P1_B_D_SWITCH_Y0+60
+#define P1_B_D_SWITCH_RX 10
+#define P1_B_D_SWITCH_RY 10
+#define P1_B_D_SWITCH_FW 2
+#define P1_B_D_SWITCH_BC 0xFFFF
+#define P1_B_D_SWITCH_FC 0x0000
+#define P1_B_D_SWITCH_T "D"
+#define P1_B_D_SWITCH_TS FONT_SIZE_48
+#define P1_B_D_SWITCH_TC 0x21E2
+#define P1_B_D_SWITCH_TMX 5
+#define P1_B_D_SWITCH_TMY 5
+#define P1_B_D_SWITCH_STATE 1
+#define P1_B_D_SWITCH_DELAY 500
+#define P1_B_D_SWITCH_ACT nothing
+
+#define P1_B_DVAL_P 1
+#define P1_B_DVAL_X0 880
+#define P1_B_DVAL_Y0 315
+#define P1_B_DVAL_X1 P1_B_DVAL_X0+130
+#define P1_B_DVAL_Y1 P1_B_DVAL_Y0+60
+#define P1_B_DVAL_RX 10
+#define P1_B_DVAL_RY 10
+#define P1_B_DVAL_FW 2
+#define P1_B_DVAL_BC 0xFFFF
+#define P1_B_DVAL_FC 0x0000
+#define P1_B_DVAL_T "1.00"
+#define P1_B_DVAL_TS FONT_SIZE_48
+#define P1_B_DVAL_TC 0x21E2
+#define P1_B_DVAL_TMX 5
+#define P1_B_DVAL_TMY 5
+#define P1_B_DVAL_STATE 1
+#define P1_B_DVAL_DELAY 500
+#define P1_B_DVAL_ACT nothing
+
+#define P1_B_DVAL_P 1
+#define P1_B_DVAL_X0 880
+#define P1_B_DVAL_Y0 315
+#define P1_B_DVAL_X1 P1_B_DVAL_X0+130
+#define P1_B_DVAL_Y1 P1_B_DVAL_Y0+60
+#define P1_B_DVAL_RX 10
+#define P1_B_DVAL_RY 10
+#define P1_B_DVAL_FW 2
+#define P1_B_DVAL_BC 0xFFFF
+#define P1_B_DVAL_FC 0x0000
+#define P1_B_DVAL_T "1.00"
+#define P1_B_DVAL_TS FONT_SIZE_48
+#define P1_B_DVAL_TC 0x21E2
+#define P1_B_DVAL_TMX 5
+#define P1_B_DVAL_TMY 5
+#define P1_B_DVAL_STATE 1
+#define P1_B_DVAL_DELAY 500
+#define P1_B_DVAL_ACT nothing
+
+#define P1_B_RECORD_P 1
+#define P1_B_RECORD_X0 530
+#define P1_B_RECORD_Y0 430
+#define P1_B_RECORD_X1 P1_B_RECORD_X0+480
+#define P1_B_RECORD_Y1 P1_B_RECORD_Y0+65
+#define P1_B_RECORD_RX 10
+#define P1_B_RECORD_RY 10
+#define P1_B_RECORD_FW 2
+#define P1_B_RECORD_BC 0xFFFF
+#define P1_B_RECORD_FC 0x0000
+#define P1_B_RECORD_T "Записать"
+#define P1_B_RECORD_TS FONT_SIZE_48
+#define P1_B_RECORD_TC 0x0000
+#define P1_B_RECORD_TMX 5
+#define P1_B_RECORD_TMY 5
+#define P1_B_RECORD_STATE 1
+#define P1_B_RECORD_DELAY 500
+#define P1_B_RECORD_ACT nothing
+
+#define L_DATETIME_P1 1
+
+
+//PAGE 2
+#define L_DATETIME_P2 2
+#define P2_B_MEAS_P 2
+#define P2_B_MEAS_ACT btn_show_meas
+
+#define P2_B_PID_P 2
+#define P2_B_PID_ACT btn_showPID
+
+#define P2_B_SETTINGS_P 2
+#define P2_B_SETTINGS_ACT nothing
+#define P2_B_SETTINGS_TC 0x0000
+
+#define P2_B_RECORD_P 2
+#define P2_B_RECORD_X0 530
+#define P2_B_RECORD_Y0 430
+#define P2_B_RECORD_X1 P2_B_RECORD_X0+480
+#define P2_B_RECORD_Y1 P2_B_RECORD_Y0+65
+#define P2_B_RECORD_RX 10
+#define P2_B_RECORD_RY 10
+#define P2_B_RECORD_FW 2
+#define P2_B_RECORD_BC 0xFFFF
+#define P2_B_RECORD_FC 0x0000
+#define P2_B_RECORD_T "Записать"
+#define P2_B_RECORD_TS FONT_SIZE_48
+#define P2_B_RECORD_TC 0x0000
+#define P2_B_RECORD_TMX 5
+#define P2_B_RECORD_TMY 5
+#define P2_B_RECORD_STATE 1
+#define P2_B_RECORD_DELAY 500
+#define P2_B_RECORD_ACT nothing
+
+#define P2_B_FSIZE_VALUE_P 2
+#define P2_B_FSIZE_VALUE_X0 710
+#define P2_B_FSIZE_VALUE_Y0 300
+#define P2_B_FSIZE_VALUE_X1 P2_B_FSIZE_VALUE_X0+130
+#define P2_B_FSIZE_VALUE_Y1 P2_B_FSIZE_VALUE_Y0+65
+#define P2_B_FSIZE_VALUE_RX 10
+#define P2_B_FSIZE_VALUE_RY 10
+#define P2_B_FSIZE_VALUE_FW 2
+#define P2_B_FSIZE_VALUE_BC 0xFFFF
+#define P2_B_FSIZE_VALUE_FC 0x0000
+#define P2_B_FSIZE_VALUE_T "50"
+#define P2_B_FSIZE_VALUE_TS FONT_SIZE_48
+#define P2_B_FSIZE_VALUE_TC 0x21E2
+#define P2_B_FSIZE_VALUE_TMX 5
+#define P2_B_FSIZE_VALUE_TMY 5
+#define P2_B_FSIZE_VALUE_STATE 1
+#define P2_B_FSIZE_VALUE_DELAY 500
+#define P2_B_FSIZE_VALUE_ACT nothing
 
 void gui_init(void);
 
